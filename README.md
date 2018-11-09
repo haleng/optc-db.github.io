@@ -2,6 +2,10 @@
 
 this forked project for add korean treasure point filter.
 
+# running page
+https://haleng.github.io/optc-db.github.io/.
+
+
 # Installation
 
 Just download it and run it in some kind of Live preview or via xampp. Or better yet access it via http://optc-db.github.io
