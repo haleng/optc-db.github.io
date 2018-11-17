@@ -2114,7 +2114,7 @@ window.drops = {
         },
         
         {
-            name: 'Lets Play♪ The Seducing Woods',
+            name: 'Lets Play! The Seducing Woods',
             thumb: 2253,
             nakama: 2225300,
             gamewith: 118916,
@@ -2130,11 +2130,11 @@ window.drops = {
         },
         
         {
-            name: 'Amande and Bobbin',
+            name: 'Angry Corps! Amande and Bobbin',
             thumb: 2327,
             nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2117, -2119 ]
+            gamewith: 127786,
+            'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2117, -2119, -2002, -2005 ]
         },
         
     ],
@@ -3102,6 +3102,16 @@ window.drops = {
             'Aokiji': [ -2023 ],
             'Akainu' : [ -2025 ],
             'Chopperman Missions': [ 2042 ],
+        },
+        
+        {
+            name: 'World Clash!',
+            thumb: 2407,
+            global: true,
+            nakama: null,
+            gamewith: 130091,
+            condition: 'Chance of dropping the Forbidden Tomes and Almighty Manuals.',
+            'Chopperman Missions': [ 2408 ],
         },
         
         {
