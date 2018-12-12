@@ -2159,6 +2159,14 @@ window.drops = {
             'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2117, -2119, -2002, -2005 ]
         },
         
+        {
+            name: 'Banquet! Extreme Tea Party',
+            thumb: 2351,
+            nakama: null,
+            gamewith: 133025,
+            'All Difficulties': [ 2350, 2351, 2352, -2055, -2105, -2107, -2121, -2126, -2004, -2148, -2181, -2350 ]
+        },
+        
     ],
 
             
@@ -2718,6 +2726,15 @@ window.drops = {
             Master: [ 2280 ],
             Expert: [ 2280 ]
         },
+        
+        {
+            name: 'Clash!! Arlong',
+            thumb: 2256,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2255 ],
+            Expert: [ 2255 ]
+        },
 
     ],
 
@@ -2731,7 +2748,7 @@ window.drops = {
             gamewith: 17473,
             slefty: 'coliseums',
             Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2288, 2322 ],
-            Neo: [ 1862, 1898, 1975, 2016 ]
+            Neo: [ 1862, 1898, 1975, 2016, 2353 ]
         },
         
         {
@@ -2885,6 +2902,14 @@ window.drops = {
             nakama: 8233600,
             gamewith: 128733,
             'Calm Sea': [ 2335 ]
+        },
+
+        {
+            name: 'Cat Burglar Nami',
+            thumb: 2362,
+            nakama: null,
+            gamewith: null,
+            'Calm Sea': [ 2361 ]
         },
         
     ],
@@ -3361,6 +3386,22 @@ window.drops = {
             global: true,
             nakama: 6187300,
             gamewith: 111278,
+            condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Sanji',
+            thumb: 912,
+            nakama: null,
+            gamewith: 120486,
+            condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Jack',
+            thumb: 2175,
+            nakama: null,
+            gamewith: 133004,
             condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
         },
    ],
