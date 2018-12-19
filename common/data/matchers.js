@@ -449,7 +449,7 @@ window.matchers = [
     {
         name: 'Typed damage dealers',
         target: 'special',
-        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]) damage/i
+        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]|character\'s Type) damage/i
     },
     
     {
@@ -528,6 +528,12 @@ window.matchers = [
         name: 'Damage reducers',
         target: 'special',
         matcher: /Reduces (any )?damage received/i
+    },
+
+    {
+        name: 'Threshold Damage reducers',
+        target: 'special',
+        matcher: /Reduces (any )?damage received above/i
     },
 
     {
