@@ -954,5 +954,36 @@ window.matchers = [
         target: 'limit',
         matcher: /\[INT\] Damage Reduction/i
     },
-
+    
+    /* * * * * Support Abiliites * * * * */
+    
+    {
+        name: 'Has Support Ability',
+        target: 'support',
+        matcher: /\S/i
+    },
+    
+    {
+        name: 'ATK Boosting Support',
+        target: 'support',
+        matcher: /Adds.+ATK/i
+    },
+    
+    {
+        name: 'HP Boosting Support',
+        target: 'support',
+        matcher: /Adds.+HP/i
+    },
+    
+    {
+        name: 'RCV Boosting Support',
+        target: 'support',
+        matcher: /Adds.+RCV/i
+    },
+    
+    {
+        name: 'Orb Controllers',
+        target: 'support',
+        matcher: /(Changes.+(orb|orbs))/i
+    },
 ];
