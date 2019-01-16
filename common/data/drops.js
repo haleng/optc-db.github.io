@@ -833,9 +833,10 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa - Royal Palace Top Floor to Town Center',
+            name: 'Dressrosa - The Royal Palace\'s Top Floor to Central Town',
             shortName: 'Dressrosa 4',
             thumb: 2126,
+            global: true,
             nakama: 1212600,
             completion: '10x Rainbow Gems',
             gamewith: 111173,
@@ -1921,7 +1922,7 @@ window.drops = {
             nakama: 2173500,
             gamewith: 66021,
             condition: 'Limited amount of turns to complete the mission.',
-            'All Difficulties': [ 1734, 1736, -1571, -1573, -1654, -641, -1182, -1188, -1210, -556, -964, -1351 ]
+            'All Difficulties': [ 1734, 1736, -1571, -2372, -1573, -1654, -641, -1182, -1188, -1210, -556, -964, -1351 ]
         },
         
         {
@@ -1979,7 +1980,7 @@ window.drops = {
             global: true,
             nakama: 2185500,
             gamewith: 79678,
-            'All Difficulties': [ 1854, 1856, -1652, -1272, -1278, -1621, -1702, -1558 ]
+            'All Difficulties': [ 1854, 1856, -1652, -2373, -1272, -1278, -1621, -1702, -1558 ]
         },
         
         {
@@ -2129,8 +2130,9 @@ window.drops = {
         },
         
         {
-            name: 'Let\'s Go See Master Nekomamushi!',
+            name: 'Let\'s Go See The Cat Viper!',
             thumb: 2177,
+            global: true,
             nakama: 2217700,
             gamewith: 114148,
             'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883, -1483, -1353, -1785 ]
@@ -2157,7 +2159,7 @@ window.drops = {
             thumb: 2277,
             nakama: null,
             gamewith: 121547,
-            'All Difficulties': [ 2276, 2278, 2279, -2074, -2076, -2078, -2072, -2050, -2115, -1784, -2053 ]
+            'All Difficulties': [ 2276, 2278, 2279, -2074, -2363, -2076, -2078, -2072, -2050, -2115, -1784, -2053 ]
         },
         
         {
@@ -2174,6 +2176,14 @@ window.drops = {
             nakama: null,
             gamewith: 133025,
             'All Difficulties': [ 2350, 2351, 2352, -2055, -2105, -2107, -2121, -2126, -2004, -2148, -2181, -2350 ]
+        },
+        
+        {
+            name: 'Our Lady\'s Motherly Love',
+            thumb: 2377,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2376, 2378, 2379, -2234, -2201, -2203, -2242, -2161, -2244 ]
         },
         
     ],
@@ -2739,11 +2749,21 @@ window.drops = {
         
         {
             name: 'Clash!! Arlong',
-            thumb: 2256,
+            thumb: 2356,
             nakama: null,
             gamewith: 134190,
-            Master: [ 2255 ],
-            Expert: [ 2255 ]
+            Master: [ 2355 ],
+            Expert: [ 2355 ]
+        },
+        
+        {
+            name: 'Clash!! Sengoku & Garp',
+            thumb: 2507,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2506 ],
+            Expert: [ 2506 ]
         },
 
     ],
@@ -2757,7 +2777,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2288, 2322, 2353 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2288, 2322, 2353, 2374 ],
             Neo: [ 1862, 1898, 1975, 2016 ]
         },
         
@@ -2886,6 +2906,7 @@ window.drops = {
         {
             name: 'Kami Enel',
             thumb: 2211,
+            global: true,
             nakama: 8221100,
             gamewith: 116377,
             'Raging Sea': [ 2210 ]
@@ -2919,8 +2940,16 @@ window.drops = {
             name: 'Cat Burglar Nami',
             thumb: 2362,
             nakama: null,
-            gamewith: null,
+            gamewith: 134017,
             'Winter Sea': [ 2361, 9025 ]
+        },
+
+        {
+            name: 'Kaido',
+            thumb: 2387,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2386 ]
         },
         
     ],
@@ -3083,6 +3112,15 @@ window.drops = {
         },
         
         {
+            name: 'Invasion! Charlotte Linlin',
+            thumb: 2381,
+            nakama: null,
+            gamewith: 136823,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
+            'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
             name: 'Rescue Ace Event - Akainu',
             thumb: 1283,
             global: true,
@@ -3236,7 +3274,7 @@ window.drops = {
             'Blackbeard': [ -261, -649, -1268, -1413, -1698, -251, -255, -259, -449, -455, -647, -1186, -1190, -1270, -1272, -1276, -1278 ],
             'Zoro': [ -718, -1085, -1362, -1391, -1881, -1921, -2035, -310, -314, -357, -359, -361, -363, -365, -1540, -1612, -1616, -1618, -1706 ],
             'Shirahoshi': [ -720, -935, -1434, -1473, -1880, -1927, -2066, -1436, -1438, -1440, -1442, -1444, -14475, -1477, -1479, -1481, -1483, -1700 ],
-            'Nekomamushi': [ -530, -748, -1571, -1652, -1663, -1707, -524, -1119, -558, -1208, -1370, -16, -1446, -1573, -1828, -1577, -1579, -1660, -1658, -1656, -1654 ],
+            'Nekomamushi': [ -530, -748, -1571, -2372, -1652, -2373, -1663, -1707, -524, -1119, -558, -1208, -1370, -16, -1446, -1573, -1828, -1577, -1579, -1660, -1658, -1656, -1654 ],
             'Trafalgar Law': [ -1001, -1045, -1751, -1763, -1922, -2001, -840, -842, -844, -846, -872, -874, -876, -878, -993, -999, -1749, -1875 ],
             'Akainu': [ -459, -1192, -1240, -1314, -1764, -1847, -2034, -750, -752, -754, -756, -758, -760, -838, -1230, -1316, -1322, -1324, -1614 ],
             'Monkey D. Luffy': [ -416, -1404, -1445, -1532, -1543, -1593, -1747, -671, -673, -906, -910, -520, -1115, -1364, -1368, -1534, -1536, -1741, -1743, -1745 ],
@@ -3331,8 +3369,9 @@ window.drops = {
         },
         
         {
-            name: 'Kami\'s Return',
+            name: 'Kami Rises Again',
             thumb: 2232,
+            global: true,
             nakama: null,
             gamewith: 117538,
             showManual: true,

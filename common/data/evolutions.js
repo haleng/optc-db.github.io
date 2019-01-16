@@ -1845,7 +1845,7 @@ window.evolutions = {
     },
     1213: {
         evolution: 1214,
-        evolvers: [ 117, 78, 98, 95, 100 ]
+        evolvers: [ 117, 78, 84, 95, 100 ]
     },
     1219: {
         evolution: 1220,
@@ -3819,6 +3819,50 @@ window.evolutions = {
         evolution: 2362,
         evolvers: [ 115, 116, 117, 118, 103 ]
     },
+    2074: {
+        evolution: 2363,
+        evolvers: [ 'skullQCK', 'skullSTR', 95, 300, 267 ]
+    },
+    2364: {
+        evolution: 2365,
+        evolvers: [ 118, 266, 98, 303, 267 ]
+    },
+    2366: {
+        evolution: 2367,
+        evolvers: [ 117, 87, 1180, 303, 103 ]
+    },
+    2368: {
+        evolution: 2369,
+        evolvers: [ 117, 84, 1180, 300, 100 ]
+    },
+    2370: {
+        evolution: 2371,
+        evolvers: [ 117, 84, 94, 300, 100 ]
+    },
+    1571: {
+        evolution: 2372,
+        evolvers: [ 'skullSTR', 118, 84, 300, 267 ]
+    },
+    1652: {
+        evolution: 2373,
+        evolvers: [ 'skullPSY', 118, 87, 303, 267 ]
+    },
+    2374: {
+        evolution: 2375,
+        evolvers: [  ]
+    },
+    2376: {
+        evolution: 2377,
+        evolvers: [ 117, 80, 86, 97, 102 ]
+    },
+    2380: {
+        evolution: 2381,
+        evolvers: [ 118, 87, 92, 98, 267 ]
+    },
+    2386: {
+        evolution: 2387,
+        evolvers: [ 115, 116, 117, 118, 100 ]
+    },
     2400: {
         evolution: 2401,
         evolvers: [ 118, 84, 89, 95, 100 ]
@@ -3835,12 +3879,32 @@ window.evolutions = {
         evolution: 2407,
         evolvers: [ 118, 87, 92, 98, 103 ]
     },
+    2409: {
+        evolution: 2410,
+        evolvers: [  ]
+    },
+    2411: {
+        evolution: 2412,
+        evolvers: [  ]
+    },
+    2413: {
+        evolution: 2414,
+        evolvers: [  ]
+    },
     2502: {
         evolution: 2503,
         evolvers: [ 118, 86, 266, 302, 267 ]
     },
+    2506: {
+        evolution: 2507,
+        evolvers: [ 104, 102, 267, 1180, 118 ]
+    },
     1763: {
         evolution: 2505,
         evolvers: [ 'skullQCK', 'skullQCK', 'skullQCK', 1180, 301 ]
+    },
+    2508: {
+        evolution: 2509,
+        evolvers: [  ]
     },
 };
