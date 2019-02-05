@@ -630,6 +630,16 @@ window.sailors = {
         rcvStatic: function(p) { return 20; },
         hpStatic: function(p) { return 20; },
     },
+    2374: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
+    2375: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
     2400: {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
@@ -694,6 +704,22 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    2421: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+    },
+    2422: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+    },
+    2425: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    2426: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
     2502: {
         staticMult: function(p) { return 3; }
@@ -810,5 +836,57 @@ window.sailors = {
     },
     5035: {
         atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    5036: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    5037: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    5038: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    5039: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    5040: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    5041: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    5042: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    5043: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    5044: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+    },
+    5045: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
+    5046: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5047: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5048: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+    },
+    5049: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
+    5050: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5051: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
     },
 };

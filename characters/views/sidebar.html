@@ -141,11 +141,11 @@
     <span class="filter width-12 exc" ng-model="filters.worldClash" ng-class="{ active: filters.worldClash }"
         ng-click="filters.worldClash = !filters.worldClash">Show World Clash Boosters</span>
 </div-->
-<div class="filter-container">
+<!--div class="filter-container">
     <span class="filter-header">Temporary Filters</span>
     <span class="filter width-12 exc" ng-model="filters.doffyBlitz" ng-class="{ active: filters.doffyBlitz }"
         ng-click="filters.doffyBlitz = !filters.doffyBlitz">Show 3.375x Doflamingo Blitz Battle Boosters</span>
-</div>
+</div-->
 
 <!--div class="filter-container">
     <span class="filter-header">Dev. filters</span>
@@ -184,7 +184,7 @@
 <div class="filter-container">
     <span class="filter-header">Support filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('support') == 0"
-        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-support-options
         ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
 </div>
 

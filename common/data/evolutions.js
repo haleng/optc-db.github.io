@@ -3849,7 +3849,7 @@ window.evolutions = {
     },
     2374: {
         evolution: 2375,
-        evolvers: [  ]
+        evolvers: [ 118, 99, 1180, 304, 104 ]
     },
     2376: {
         evolution: 2377,
@@ -3862,6 +3862,18 @@ window.evolutions = {
     2386: {
         evolution: 2387,
         evolvers: [ 115, 116, 117, 118, 100 ]
+    },
+    2395: {
+        evolution: 2398,
+        evolvers: [ 2396, 2397 ]
+    },
+    2396: {
+        evolution: 2398,
+        evolvers: [ 2395, 2397 ]
+    },
+    2397: {
+        evolution: 2398,
+        evolvers: [ 2395, 2396 ]
     },
     2400: {
         evolution: 2401,
@@ -3881,14 +3893,46 @@ window.evolutions = {
     },
     2409: {
         evolution: 2410,
-        evolvers: [  ]
+        evolvers: [ 118, 85, 96, 301, 101 ]
     },
     2411: {
         evolution: 2412,
-        evolvers: [  ]
+        evolvers: [ 118, 88, 99, 304, 104 ]
     },
     2413: {
         evolution: 2414,
+        evolvers: [ 118, 86, 97, 302, 102 ]
+    },
+    2415: {
+        evolution: 2416,
+        evolvers: [ 118, 97, 1180, 302, 102 ]
+    },
+    2417: {
+        evolution: 2418,
+        evolvers: [ 118, 302, 301, 1180, 267 ]
+    },
+    2419: {
+        evolution: 2420,
+        evolvers: [ 84, 266, 95, 300, 100 ]
+    },
+    2421: {
+        evolution: 2422,
+        evolvers: [ 85, 96, 1180, 301, 101 ]
+    },
+    2423: {
+        evolution: 2424,
+        evolvers: [ 83, 266, 99, 304, 104 ]
+    },
+    2425: {
+        evolution: 2426,
+        evolvers: [ 83, 266, 98, 303, 103 ]
+    },
+    2427: {
+        evolution: 2428,
+        evolvers: [  ]
+    },
+    2430: {
+        evolution: 2431,
         evolvers: [  ]
     },
     2502: {
@@ -3906,5 +3950,13 @@ window.evolutions = {
     2508: {
         evolution: 2509,
         evolvers: [  ]
+    },
+    2510: {
+        evolution: 2511,
+        evolvers: [ 118, 84, 300, 100, 266 ]
+    },
+    2512: {
+        evolution: 2513,
+        evolvers: [ 118, 96, 1180, 83, 104 ]
     },
 };

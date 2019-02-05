@@ -2186,6 +2186,14 @@ window.drops = {
             'All Difficulties': [ 2376, 2378, 2379, -2234, -2201, -2203, -2242, -2161, -2244 ]
         },
         
+        {
+            name: 'Cavendish Fortnight',
+            thumb: 2428,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2427, 2429, -2236, -2265, -2205, -2238, -2267, -2269, -2125 ]
+        },
+        
     ],
 
             
@@ -2231,6 +2239,16 @@ window.drops = {
             gamewith: 5905,
             slefty: 'raid_bosses/5',
             Master: [ 113, 118, 262, 264, 305 ],
+        },
+
+        {
+            name: 'Clash Neo!! Vice-Admiral Garp',
+            thumb: 2511,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: 'Master: Fighter/Slasher/Shooter Only',
+            Master: [ 2510 ],
         },
 
         {
@@ -2757,6 +2775,15 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Big Emperor',
+            thumb: 2398,
+            nakama: null,
+            gamewith: 140044,
+            Master: [ 2395, 2396, 2397, -2398 ],
+            Expert: [ 2395, 2396, 2397, -2398 ]
+        },
+        
+        {
             name: 'Clash!! Sengoku & Garp',
             thumb: 2507,
             global: true,
@@ -2764,6 +2791,17 @@ window.drops = {
             gamewith: null,
             Master: [ 2506 ],
             Expert: [ 2506 ]
+        },
+        
+        {
+            name: 'Showdown!! Shanks & Mihawk',
+            thumb: 2513,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2512 ],
+            Expert: [ 2512 ],
+            Ultimate: [ 2512 ],
         },
 
     ],
@@ -2777,7 +2815,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2288, 2322, 2353, 2374 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2288, 2322, 2353, 2374, 2415 ],
             Neo: [ 1862, 1898, 1975, 2016 ]
         },
         
@@ -3191,15 +3229,22 @@ window.drops = {
         },
         
         {
-            name: 'Battle Blitz! Akainu vs Aokiji',
+            name: 'Face Off! Akainu vs Aokiji',
             thumb: 2023,
             global: true,
             nakama: 6202300,
-            gamewith: null,
+            gamewith: 98096,
             condition: 'Chance of dropping the Silver Almighty Manual, Traning Potions, Guilding Fragments, Guilding Crystals and Guilding Jewels.',
             'Aokiji': [ -2023 ],
             'Akainu' : [ -2025 ],
             'Chopperman Missions': [ 2042 ],
+        },
+        
+        {
+            name: 'Face Off! Luffy vs Katakuri',
+            thumb: 2363,
+            gamewith: 136731,
+            condition: 'Chance of dropping the Support Medallions.',
         },
         
         {
@@ -3359,7 +3404,7 @@ window.drops = {
         },
         
         {
-            name: 'Germa Resurrection​ Plan!',
+            name: 'Germa Resurrection Plan!',
             thumb: 2138,
             global: true,
             nakama: 6128001,
@@ -3375,7 +3420,7 @@ window.drops = {
             nakama: null,
             gamewith: 117538,
             showManual: true,
-            'All Difficulties': [ 9021, -545, -602, -1896, -1929 ],
+            'All Difficulties': [ 9021, 545, -546, 602, -603, 1896, -1897, 1929, -1930 ],
         },
         
         {
@@ -3396,11 +3441,11 @@ window.drops = {
         },
         
         {
-            name: 'Garp Challenge!',
-            thumb: 1318,
-            nakama: 6213800,
-            gamewith: 108237,
-            condition: "The Gamewith Link is only for the most recent Garp Challenge (Fist)",
+            name: 'Clash!! Enel [Extra]',
+            thumb: 603,
+            gamewith: 138206,
+            'All Difficulties': [ 602 ],
+            condition: "Chance of dropping the Support Medallions.",
         },
         
         {
