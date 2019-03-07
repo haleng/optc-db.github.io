@@ -126,17 +126,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var hpMax = 0, rcvTotal = 0, bonusrcv = 0;
         team.forEach(function(x,n) {
             if (n > 5 || x.unit === null) return;
+            var shipParam = getParameters(n);
             // hp
             var hp = getStatOfUnit(x,'hp');
-            hp += getShipBonus('hp',true,x.unit,n,team[1].unit,n);
+            hp += getShipBonus('hp',true,x.unit,n,team[1].unit,n,shipParam);
             hp = applyStaticEffectsToHP(n,hp);
             hp *= getEffectBonus('hp',x.unit);
-            hp *= getShipBonus('hp',false,x.unit,n,team[1].unit,n);
+            hp *= getShipBonus('hp',false,x.unit,n,team[1].unit,n,shipParam);
             hpMax += Math.floor(applyCaptainEffectsToHP(n,hp));
             // rcv
             var rcv = getStatOfUnit(x,'rcv');
-            rcv += getShipBonus('rcv',true,x.unit,n,team[1].unit,n);
-            rcv *= getShipBonus('rcv',false,x.unit,n,team[1].unit,n);
+            rcv += getShipBonus('rcv',true,x.unit,n,team[1].unit,n,shipParam);
+            rcv *= getShipBonus('rcv',false,x.unit,n,team[1].unit,n,shipParam);
             rcv *= getEffectBonus('rcv',x.unit);
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
             
@@ -217,11 +218,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // populate array with the damage of each unit in the team
         team.forEach(function(x,n) {
             if (n > 5 || x.unit === null || $scope.tdata.team[n].lock > 0) return;
+            var shipParam = getParameters(n);
             var friendCaptain = $scope.tdata.team[0];
             var captain = $scope.tdata.team[1];
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
-            var ship = getShipBonus('atk',false,x.unit,n,team[1].unit,n), againstType = type;//Same problem as above, so yeah
+            var ship = getShipBonus('atk',false,x.unit,n,team[1].unit,n,shipParam), againstType = type;//Same problem as above, so yeah
             var multipliers = [ ];
             if (orb == 'g') orb = 1.5;
             if (orb == 0.5 && x.unit.type == 'DEX') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2363].turnedOn || window.specials[2370].turnedOn || window.specials[2371].turnedOn) ? 2 : 0.5;
@@ -248,7 +250,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2300 ].includes(team[temp].unit.number + 1)){
+                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 5052, 5054, 5055, 5057 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                         if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){
@@ -298,7 +300,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 ((window.specials[2128].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Striker"))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
             if (orb == 'str') orb = 1;
-            atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
+            atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n,shipParam);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
             multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type, x), 'type' ]); // type multiplier
             multipliers.push([ getEffectBonus('atk',x.unit), 'map effect' ]); // effect bonus (fixed)
@@ -492,14 +494,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return defreduced;
     };
 
-    var getShipBonus = function(type,static,unit,slot,captain,chainPosition) {
+    var getShipBonus = function(type,static,unit,slot,captain,chainPosition,parameters) {
         var result = (static ? 0 : 1);
         for (var key in shipBonus.bonus) {
             if (key.indexOf(type) !== 0) continue;
             var isStatic = (key.indexOf('Static') !== -1);
             if (isStatic != static) continue;
-            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter(), captain : captain, hitModifiers: hitModifiers, chainPosition: chainPosition });
-            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter(), captain : captain, hitModifiers: hitModifiers, chainPosition: chainPosition });
+            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter(), captain : captain, hitModifiers: hitModifiers, chainPosition: chainPosition, p: parameters });
+            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter(), captain : captain, hitModifiers: hitModifiers, chainPosition: chainPosition, p: parameters });
         }
         return result;
     };
@@ -543,6 +545,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var getChainMultiplier = function(chainBase, hitModifiers, chainModifier) {
+        var sanjijudge = 1;
+        if ($scope.data.effect == '1.25x Chain Multiplier - Sanji Judge Change Action'){
+            sanjijudge = 1.25;
+        }
         var result = chainBase;
         for (var i=0;i<hitModifiers.length;++i) {
             if (hitModifiers[i] == 'Perfect') result += chainBase * chainModifier * 0.3;
@@ -550,6 +556,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             else if (hitModifiers[i] == 'Good') result += 0;
             else result = chainBase;
         }
+        result = result != 1 ? result * sanjijudge : result;
         return result;
     };
 
@@ -684,7 +691,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     chainMultiplier = Math.min(mapEffect.chainLimiter(params[n]), chainMultiplier);
                 else if (special.hasOwnProperty('chainLimiter'))
                     chainMultiplier = Math.min(special.chainLimiter(params[n]), chainMultiplier);
-                if($scope.tdata.semlaCounter.value >= 3 && (x.unit.unit.number == 2232 || x.unit.unit.number == 2233) && x.position < 2){
+                if($scope.tdata.semlaCounter.value >= 3 && (x.unit.unit.number == 2232 || x.unit.unit.number == 2233 || x.unit.unit.number == 2499) && x.position < 2){
                     chainMultiplier = 1.0;
                 }
                 // add or update chain multiplier to multiplier list
@@ -972,13 +979,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
             }
             // activate turn counter if necessary
-            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2508 || id == 2509))
+            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2440 || id == 2441))
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && (id == 1609 || id == 1610 || id == 2232))
                 $scope.tdata.healCounter.enabled = true;
             if (id == 2364 || id == 2365)
                 $scope.tdata.damageCounter.enabled = true;
-            if (n < 2 && (id == 2233 || id == 2234))
+            if (n < 2 && (id == 2233 || id == 2234 || id == 2500))
                 $scope.tdata.semlaCounter.enabled = true;
         });
         if (conflictWarning) 
@@ -1212,7 +1219,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if (x.hasOwnProperty('rcvStatic'))
                             rcvtemp += x.rcvStatic(getParameters(i));
                     });
-                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302].has(id)){
+                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302, 2443].has(id)){
                         var hitsCount = { 'Perfect': 0, 'Great': 0, 'Good': 0, 'Below Good': 0, 'Miss': 0 };
                         var teamlength = 0;
                         
@@ -1223,6 +1230,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += id == 1251 ? Math.floor(([0, .5, .75, 1, 1.5, 2, 3.5][classCounter().Powerhouse]) * (data.team[i].rcv + rcvtemp)) : 0;
                         healAmount += id == 1889 ? capActions[i] ? 2 * (data.team[i].rcv + rcvtemp) : 1.5 * (data.team[i].rcv + rcvtemp) : 0;
                         healAmount += id == 2211 ? capActions[i] ? 510 : 51 : 0;
+                        healAmount += id == 2443 ? capActions[i] ? 500 : 50 : 0;
                         healAmount += (id == 1000 || id == 1001 || id == 2195) ? (1.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Great']) : 0;
                         healAmount += (id == 1319) ? (1 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1320) ? (1.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * hitsCount['Perfect']) : 0;

@@ -3929,11 +3929,11 @@ window.evolutions = {
     },
     2427: {
         evolution: 2428,
-        evolvers: [  ]
+        evolvers: [ 117, 81, 87, 98, 103 ]
     },
     2430: {
         evolution: 2431,
-        evolvers: [  ]
+        evolvers: [ 118, 87, 98, 303, 103 ]
     },
     2502: {
         evolution: 2503,
@@ -3947,9 +3947,45 @@ window.evolutions = {
         evolution: 2505,
         evolvers: [ 'skullQCK', 'skullQCK', 'skullQCK', 1180, 301 ]
     },
-    2508: {
-        evolution: 2509,
-        evolvers: [  ]
+    2440: {
+        evolution: 2441,
+        evolvers: [ 118, 86, 266, 302, 1180 ]
+    },
+    2442: {
+        evolution: 2443,
+        evolvers: [ 115, 116, 117, 118, 101 ]
+    },
+    870: {
+        evolution: 2444,
+        evolvers: [ 'skullDoflamingo', 'skullDoflamingo', 'skullDoflamingo', 'skullDoflamingo', 'skullDoflamingo', ]
+    },
+    2445: {
+        evolution: 2446,
+        evolvers: [ 118, 103, 98, 303, 267 ]
+    },
+    2447: {
+        evolution: 2448,
+        evolvers: [ 'skullIchiji2', 'skullIchiji2', 'skullIchiji2', 'skullIchiji2', 'skullIchiji2' ]
+    },
+    2449: {
+        evolution: 2450,
+        evolvers: [ 'skullNiji2', 'skullNiji2', 'skullNiji2', 'skullNiji2', 'skullNiji2' ]
+    },
+    2451: {
+        evolution: 2452,
+        evolvers: [ 'skullYonji2', 'skullYonji2', 'skullYonji2', 'skullYonji2', 'skullYonji2' ]
+    },
+    2453: {
+        evolution: 2454,
+        evolvers: [ 'skullReiju2', 'skullReiju2', 'skullReiju2', 'skullReiju2', 'skullReiju2' ]
+    },
+    2456: {
+        evolution: 2457,
+        evolvers: [ 117, 82, 88, 99, 104 ]
+    },
+    2234: {
+        evolution: 2500,
+        evolvers: [ 'skullSTR', 118, 84, 300, 267 ]
     },
     2510: {
         evolution: 2511,
@@ -3958,5 +3994,17 @@ window.evolutions = {
     2512: {
         evolution: 2513,
         evolvers: [ 118, 96, 1180, 83, 104 ]
+    },
+    2516: {
+        evolution: 2517,
+        evolvers: [ 118, 79, 1180, 301, 267 ]
+    },
+    2518: {
+        evolution: 2519,
+        evolvers: [ 117, 83, 86, 302, 102 ]
+    },
+    2520: {
+        evolution: 2521,
+        evolvers: [ 117, 83, 84, 300, 100 ]
     },
 };
