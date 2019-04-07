@@ -199,6 +199,20 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             if (Katacount !== 2) return false;
             else if (!matching) return false;
         }
+        if (filters.franky){
+          var Frankycount = 0;
+          var Frankyclass = [ "Fighter", "Slasher", "Striker", "Shooter",];
+          if (!Array.isArray(unit.class[0])) {
+            for(var i = 0; i < Frankyclass.length; i++)
+              if(unit.class.indexOf(Frankyclass[i]) != -1)
+                Frankycount++;
+          }
+          else
+            for(var i = 0; i < Frankyclass.length; i++)
+              if(unit.class[2].indexOf(Frankyclass[i]) != -1)
+                Frankycount++;
+          if (Frankycount === 0) return false;
+        }
         if (filters.katakuri){
             var Katacount = 0;
             var Kataclass = [ "Fighter", "Striker", "Shooter", "Cerebral", "Powerhouse" ];
