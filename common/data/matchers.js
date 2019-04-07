@@ -616,6 +616,12 @@ window.matchers = [
     },
 
     {
+        name: 'Captain Swapping special',
+        target: 'special',
+        matcher: /Swaps this unit with your captain/i 
+    },
+
+    {
         name: 'Orb rate Increase and Decrease reducer',
         target: 'special',
         matcher: /(reduces|removes).+Orb Rate Up and Orb Rate Down.+Buffs/i
@@ -816,6 +822,12 @@ window.matchers = [
     },
     
     {
+        name: 'Enemy Type-Based Damage booster',
+        target: 'sailor',
+        matcher: /Boosts this character's damage against/i
+    },
+    
+    {
         name: 'Full-board Premptive Orb Controllers',
         target: 'sailor',
         matcher: /Changes all orbs into/i
@@ -1003,6 +1015,12 @@ window.matchers = [
         name: 'Orb Controllers',
         target: 'support',
         matcher: /(Changes.+(orb|orbs))/i
+    },
+    
+    {
+        name: 'Damage Reduction supports',
+        target: 'support',
+        matcher: /Reduces damage received/i
     },
 
     {
