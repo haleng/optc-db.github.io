@@ -501,7 +501,7 @@ window.ships = [
     { //38
         name: "Nostra Castello",
         thumb: 'ship_0040_c.png',
-        description: 'Boosts ATK of all characters by 1.55x and their HP by 1.3x. Makes PERFECTs easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK if you have a Slasher, Free Spirit or Powerhouse characters on your crew.',
+        description: 'Boosts ATK of all characters by 1.55x and their HP by 1.3x. Makes PERFECTs easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK by 50% per Slasher, Free Spirit or Powerhouse class on your crew.',
         atk: function(p) {
             var reduction = 1;
             if(p.classCount.Slasher > 0) reduction *= 0.5;
@@ -522,8 +522,9 @@ window.ships = [
         description: 'Boosts chances of getting Matching orbs, Boosts HP of all characters by 1.25x. If your Captain is a Powerhouse or Driven character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x at the start of the chain, by 1.65x after 3 consecutive PERFECTs. Special: Changes bottom right orb into [RCV] (Cooldown: 6 turns). (currently only boosts by 1.5x unconditionally, 1.65x boost is a WIP)',
         damageSorter: function(d) { return CrunchUtils.typeSort(d, 1.65, [ "QCK", "STR", "DEX" ]); },
         atk: function(p) {
+            return (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.65 : 1 : 1;
             //return (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? p.hitModifiers[0].slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 1.65 : 1.5 : 1 : 1;
-            return 1.5;//this shit still broke
+            //return 1.5;//this shit still broke
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) {

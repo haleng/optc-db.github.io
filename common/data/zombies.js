@@ -737,6 +737,22 @@ window.zombies = {
         type: 'healer',
         amount: 500
     },
+    2495: { // Pudding
+        type: 'healer',
+        multiplier: 1
+    },
+    2496: { // Pudding
+        type: 'healer',
+        multiplier: 1.5
+    },
+    2512: { // Moria
+        type: 'healer',
+        multiplier: 3
+    },
+    2529: { // Neptune
+        type: 'healer',
+        multiplier: 5
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300
@@ -764,5 +780,21 @@ window.zombies = {
     5065: { // Smoothie&Oven
         type: 'healer',
         multiplier: 3
+    },
+    5075: { // Zoro/Sanji
+        type: 'healer',
+        multiplier: 2
+    },
+    5078: { // Chopper/Carrot
+        type: 'healer',
+        amount: 500
+    },
+    5080: { // Chopper/Carrot
+        type: 'healer',
+        amount: 1000
+    },
+    5081: { // Chopper/Carrot
+        type: 'healer',
+        amount: 1000
     },
 };
