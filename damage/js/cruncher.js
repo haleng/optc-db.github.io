@@ -243,7 +243,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))
                                      || ((window.specials[1528].turnedOn) && (x.unit.class.has("Powerhouse")))
                                      || (window.specials[2128].turnedOn && (x.unit.class.has("Striker") || x.unit.class.has("Slasher")))) ? 2 : 0.5;
-            if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn 
+            if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn  || window.specials[2553].turnedOn 
                                      || ((window.specials[1259].turnedOn || window.specials[1260].turnedOn || window.specials[2425].turnedOn || window.specials[2426].turnedOn) && x.unit.class.has("Driven"))
                                      || ((window.specials[1323].turnedOn || window.specials[1324].turnedOn) && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))
                                      || ((window.specials[1528].turnedOn || window.specials[2318].turnedOn) && x.unit.class.has("Powerhouse"))
@@ -259,7 +259,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))
                                      || ((window.specials[1528].turnedOn) && (x.unit.class.has("Powerhouse")))
                                      || (window.specials[2128].turnedOn && (x.unit.class.has("Striker") || x.unit.class.has("Slasher")))) ? 2 : 'dex';
-            if (orb == 'int') orb = (window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2249].turnedOn 
+            if (orb == 'int') orb = (window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2249].turnedOn || window.specials[2527].turnedOn
                                      || ((window.specials[2374].turnedOn || window.specials[2375].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))) ? 2 : 'int';
             
@@ -288,6 +288,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                             orb = 2;
                         }
                         if ([ 2306 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Slasher") || x.unit.class.has("Cerebral"))){
+                            orb = 2;
+                        }
+                        if ([ 5152, 5154, 5155, 5156, 5158, 5159 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Striker") || x.unit.class.has("Cerebral"))){
                             orb = 2;
                         }
                         if ([ 5036, 5037, 5038, 5039, 5040, 5041, 5042, 5043 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Driven")){
@@ -345,6 +348,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 result = applyCaptainEffectsToDamage(result,enabledEffects[i].atkStatic,null,true,enabledEffects[i].sourceSlot);
             if (enabledEffects[i].hasOwnProperty('atk'))
                 result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk,null,false,enabledEffects[i].sourceSlot);
+        }
+        for (var i=0;i<enabledSpecials.length;++i) {
+            if (enabledSpecials[i].hasOwnProperty('atkStatic'))
+                result = applyCaptainEffectsToDamage(result,enabledSpecials[i].atkStatic,null,true,enabledSpecials[i].sourceSlot);
         }
         
         // if the user has specified a custom order, sort by that
@@ -556,10 +563,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (attackerType == 'DEX' && attackedType == 'STR') typeMult = 0.5;
         
         //Get the strongest Color affinity Mult if it exists and apply it
-        affinityMultiplier.forEach(function(special){
+        if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {
+            affinityMultiplier.forEach(function(special){
                     if(affinityMult<special.affinityMultiplier(unit))
                         affinityMult = special.affinityMultiplier(unit);
                 });
+        }
+        else{
+            affinityMult = effects[$scope.data.effect]['affinity'](unit.unit);
+        }
         
         //Get the strongest Color affinity Mult captains
         captAffinityMultiplier.forEach(function(captain){
@@ -839,7 +851,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * The function should return true if there's a conflict between specials
      */
     var computeSpecialsCombinations = function() {
-        var result = { type: [ ], class: [ ], orb: [ ], affinity: [ ], condition: [ ]};
+        var result = { type: [ ], class: [ ], base: [ ], orb: [ ], affinity: [ ], condition: [ ]};
         chainSpecials = [ ];
         chainAddition = [ ];
         affinityMultiplier = [ ];
@@ -918,11 +930,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             for (var y=0;y<enabledSpecials.length;++y) {
                 if (enabledSpecials[y].hasOwnProperty('staticMult')){
                     var slot = enabledSpecials[y].sourceSlot;
+                    params.sourceSlot = slot;
                     if (enabledSpecials[y].staticMult(params) >= multSpecial){
                         specialid = team[slot].unit.number + 1;
                         multSpecial = enabledSpecials[y].staticMult(params);
                         baseDamage = getStatOfUnit(team[slot],'atk');
                         enabledEffects.forEach(function(x) {
+                            if (x.hasOwnProperty('atkStatic'))
+                                baseDamage += x.atkStatic(getParameters(slot));
+                        });
+                        enabledSpecials.forEach(function(x) {
                             if (x.hasOwnProperty('atkStatic'))
                                 baseDamage += x.atkStatic(getParameters(slot));
                         });
@@ -942,6 +959,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledEffects.forEach(function(x) {
                         if (x.hasOwnProperty('atkStatic'))
                             baseDamage2 += x.atkStatic(getParameters(slot));
+                    });
+                    enabledSpecials.forEach(function(x) {
+                        if (x.hasOwnProperty('atkStatic'))
+                            baseDamage += x.atkStatic(getParameters(slot));
                     });
                     var staticDamage = Math.ceil((baseDamage2)*mult*conditionalMultiplier*affinityMultiplier);
                     if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
@@ -1011,7 +1032,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
             }
             // activate turn counter if necessary
-            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2440 || id == 2441))
+            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2440 || id == 2441 || id == 5074))
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && (id == 1609 || id == 1610 || id == 2232))
                 $scope.tdata.healCounter.enabled = true;
@@ -1254,7 +1275,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if (x.hasOwnProperty('rcv') && x.sourceSlot > 1)
                             rcvmulttemp *= x.rcv(getParameters(i));
                     });
-                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302, 2443].has(id)){
+                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302, 2443, 5083, 5084, 5085, 5087, 5088, 5089 ].has(id)){
                         var hitsCount = { 'Perfect': 0, 'Great': 0, 'Good': 0, 'Below Good': 0, 'Miss': 0 };
                         var teamlength = 0;
                         
@@ -1269,7 +1290,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += (id == 1000 || id == 1001 || id == 2195) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Great']) : 0;
                         healAmount += (id == 1319) ? (1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1320) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
-                        healAmount += (id == 1750 || id == 1751 || id == 1922) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
+                        healAmount += (id == 1750 || id == 1751 || id == 1922 || id == 5083 || id == 5087) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
+                        healAmount += (id == 5084 || id == 5085 || id == 5088 || id == 5089) ? (1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += ((id == 2301 || id == 2302) && classCounter().Shooter == 6) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += id == 2261 ? capActions[i] ? 1.75 * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
                         
