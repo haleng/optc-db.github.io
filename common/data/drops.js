@@ -495,17 +495,17 @@ window.drops = {
             nakama: 1081600,
             completion: '5x Rainbow Gems',
             gamewith: 19269,
-            '01': [ 89, 90, 91, 387, 817, 818, 819, 820, 821 ],
-            '02': [ 89, 90, 91, 92, 93, 812, 817, 818, 819, 820, 821 ],
-            '03': [ 116, 817, 818, 819, 820, 821 ],
-            '04': [ 110, 111, 112, 814, 817, 818, 819 ],
-            '05': [ 113, 114, 425, 820, 821 ],
-            '06': [ 110, 111, 112, 814, 817, 818, 819 ],
-            '07': [ 80, 81, 82, 84, 85, 394, 822, 823, 824 ],
-            '08': [ 116, 117, 813, 817, 818, 819, 825, 826, 827 ],
-            '09': [ 116, 117, 820, 821, 825, 826, 827 ],
-            '10': [ 78, 79, 80, 81, 82, 393, 817, 818, 819, 820, 821, 822, 823, 824 ],
-            '11': [ 98, 99, 113, 114, 303, 304, 815, 817, 818, 819, 820, 821, 825, 826, 827 ]
+            '01': [ 89, 90, 91, 387, 817, 818, 819, 820, 821, 407 ],
+            '02': [ 89, 90, 91, 92, 93, 812, 817, 818, 819, 820, 821, 407 ],
+            '03': [ 116, 817, 818, 819, 820, 821, 407 ],
+            '04': [ 110, 111, 112, 814, 817, 818, 819, 407 ],
+            '05': [ 113, 114, 425, 820, 821, 407 ],
+            '06': [ 110, 111, 112, 814, 817, 818, 819, 407 ],
+            '07': [ 80, 81, 82, 84, 85, 394, 822, 823, 824, 407 ],
+            '08': [ 116, 117, 813, 817, 818, 819, 825, 826, 827, 407 ],
+            '09': [ 116, 117, 820, 821, 825, 826, 827, 407 ],
+            '10': [ 78, 79, 80, 81, 82, 393, 817, 818, 819, 820, 821, 822, 823, 824, 407 ],
+            '11': [ 98, 99, 113, 114, 303, 304, 815, 817, 818, 819, 820, 821, 825, 826, 827, 407 ]
         },
 
         {
@@ -938,15 +938,25 @@ window.drops = {
             '11': [ 2320 ],
         },
         
-        /*{
-            name: 'Outside of Town to Bege\'s Hideout',
+        {
+            name: 'Outside of Town - Bege\'s Hideout',
             dropID: 'story40',
             shortName: 'Whole Cake 2',
-            thumb: null,
+            thumb: 2597,
             nakama: null,
             completion: '5x Rainbow Gems',
-            gamewith: null,
-        },*/
+            gamewith: 155967,
+            '01': [ 2595, 2162 ],
+            '02': [  ],
+            '03': [ 2127, 2128, 2129, 2130 ],
+            '04': [ 2288 ],
+            '05': [ 2162 ],
+            '06': [  ],
+            '07': [  ],
+            '08': [ 2596 ],
+            '09': [  ],
+            '10': [ 2597, 2598, 2599 ],
+        },
     ], 
 
     'Booster and Evolver Island': [
@@ -1630,7 +1640,8 @@ window.drops = {
             nakama: 2092900,
             gamewith: 24198,
             condition: 'You can only bring STR units',
-            'All Difficulties': [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506, -1115 ]
+            'Japan': [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506, -1115 ],
+            'Global': [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -791, -1115 ]
         },
         
         {
@@ -2340,7 +2351,7 @@ window.drops = {
         },
         
         {
-            name: 'Banquet! The Best Tea Party Ever!',
+            name: 'The Finest of Tea Parties!',
             dropID: 'event114',
             global: true,
             thumb: 2351,
@@ -2352,6 +2363,7 @@ window.drops = {
         {
             name: 'Holy Mother\'s Love - Mother Carmel',
             dropID: 'event115',
+            global: true,
             thumb: 2377,
             nakama: 2237700,
             gamewith: 136822,
@@ -2406,9 +2418,9 @@ window.drops = {
         {
             name: 'Hell\'s Past! Young Doflamingo',
             dropID: 'event121',
-            thumb: null,
+            thumb: 2571,
             nakama: null,
-            gamewith: null,
+            gamewith: 153186,
             'All Difficulties': [ 2570, 2572, 2573, -2418, -2465, -1045, -2001, -2369, -2185, -2183, -2287, -2119, -2082, -1993, -2031, -2103, -2105, -1987, -2229, -2317, -2318 ]
         },
         
@@ -3163,7 +3175,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 883, 902, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1603, 1627, 1666, 1693, 1732, 1791, 1827, 1944, 2036, 2162, 2192, 2353, 2415, 2470, 2488 ],
+            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 883, 902, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1603, 1627, 1666, 1693, 1827, 1944, 2036, 2162, 2192, 2353, 2415, 2470, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
@@ -3173,7 +3185,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1791, 2036, 2162, 2192, 2488 ],
+            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 2036, 2162, 2192, 2488 ],
         },
         
         {
@@ -3504,6 +3516,29 @@ window.drops = {
         },
 
         {
+            name: 'Whale Forest Guardian',
+            thumb: 1733,
+            showManual: true,
+            global: true,
+            nakama: 5173201,
+            gamewith: 66570,
+            slefty: 'coliseums',
+            Chaos: [ 1732, -1733 ],
+        },
+
+        {
+            name: 'Coliseum Up-and-Comer',
+            thumb: 1792,
+            showManual: true,
+            global: true,
+            nakama: 5179101,
+            gamewith: 70189,
+            slefty: 'coliseums',
+            Chaos: [ 1791, -1792 ],
+            Underground: [ 1791, -1792 ],
+        },
+
+        {
             name: 'Captain of the Musketeers',
             thumb: 1828,
             showManual: true,
@@ -3536,6 +3571,17 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1896, -1897 ],
             Underground: [ 1896, -1897 ],
+        },
+
+        {
+            name: 'Awaiting the World\'s Dawn',
+            thumb: 1945,
+            showManual: true,
+            global: true,
+            nakama: 5194401,
+            gamewith: 87083,
+            slefty: 'coliseums',
+            Chaos: [ 1944, -1945 ],
         },
 
         {
@@ -3582,6 +3628,18 @@ window.drops = {
             gamewith: 149444,
             slefty: 'coliseums',
             'All Difficulties': [ 2528, 2530 ],
+        },
+
+        {
+            name: 'Sweet Pain',
+            thumb: 2163,
+            showManual: true,
+            global: true,
+            nakama: 5216201,
+            gamewith: 110906,
+            slefty: 'coliseums',
+            Chaos: [ 2162, -2163 ],
+            Underground: [ 2162, -2163 ],
         },
 
         {
@@ -3672,6 +3730,16 @@ window.drops = {
             gamewith: null,
             slefty: 'coliseums',
             Chaos: [ 2568, -2569 ],
+        },
+
+        {
+            name: 'Jinbe',
+            thumb: 2611,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2610, -2611 ],
         },
         
     ],
@@ -3845,7 +3913,7 @@ window.drops = {
             global: true,
             nakama: 8238700,
             gamewith: 137053,
-            'Raging Sea': [ 2386 ]
+            'Roaring Sea': [ 2386 ]
         },
 
         {
@@ -3871,7 +3939,7 @@ window.drops = {
             dropID: 'treasuremap20',
             thumb: 2510,
             nakama: null,
-            gamewith: null,
+            gamewith: 148609,
             'Raging Sea': [ 2509 ]
         },
 
@@ -3880,8 +3948,26 @@ window.drops = {
             dropID: 'treasuremap21',
             thumb: 2557,
             nakama: null,
-            gamewith: null,
+            gamewith: 151643,
             'Raging Sea': [ 2556 ]
+        },
+
+        {
+            name: 'Rob Lucci',
+            dropID: 'treasuremap22',
+            thumb: 2583,
+            nakama: null,
+            gamewith: 154065,
+            'Primordial Sea': [ 2582 ]
+        },
+
+        {
+            name: 'Sakazuki & Issho',
+            dropID: 'treasuremap23',
+            thumb: 2618,
+            nakama: null,
+            gamewith: null,
+            'Primordial Sea': [ 2616, 2617 ]
         },
         
     ],
@@ -3975,9 +4061,20 @@ window.drops = {
             dropID: 'bond1',
             thumb: 2531,
             nakama: null,
-            gamewith: 149563,
-            'All Difficulties': [ 2531, 2518 ]
-        },
+            gamewith: [ 150056, 155125 ],
+            'All Difficulties': [ 2531 ],
+            'Round 1': [ 2518 ],
+            'Round 2': [ 2615 ],
+        },/*
+        
+        {
+            name: 'Garp',
+            dropID: 'bond2',
+            thumb: 2632,
+            nakama: null,
+            gamewith: [ null ],
+            'All Difficulties': [ 2632 ],
+        },*/
         
     ],
 
@@ -4436,6 +4533,24 @@ window.drops = {
         },
         
         {
+            name: 'Beautiful Women\'s Relief - Nami',
+            thumb: 2588,
+            nakama: null,
+            gamewith: 155238,
+            showManual: true,
+            'All Difficulties': [ 9032, -2588, -1955, -1366, -2076 ],
+        },
+        
+        {
+            name: 'Beautiful Women\'s Relief - Hancock',
+            thumb: 2434,
+            nakama: null,
+            gamewith: 155240,
+            showManual: true,
+            'All Difficulties': [ 9031, -2434, -2183, -1747, -1445, -415 ],
+        },
+        
+        {
             name: 'Escape! Whole Cake Island',
             thumb: 2234,
             nakama: 6223400,
@@ -4505,6 +4620,15 @@ window.drops = {
             nakama: 6217500,
             gamewith: 133004,
             condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Daifuku',
+            thumb: 2244,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: "Challenge: Crew's Special gauge is maxed",
         },
    ],
 
