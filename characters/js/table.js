@@ -205,16 +205,17 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
 
 
 		// korea tm filter
-        if (filters.koreaTM_kizaru && list_koreaTM_kizaru.indexOf(id) == -1) return false;
-        if (filters.koreaTM_bigmam && list_koreaTM_bigmam.indexOf(id) == -1) return false;
-		if (filters.koreaTM_crocodile && list_koreaTM_crocodile.indexOf(id) == -1) return false;
-		if (filters.list_koreaTM_jack && list_koreaTM_jack.indexOf(id) == -1) return false;
-        if (filters.list_koreaTM_enel && list_koreaTM_enel.indexOf(id) == -1) return false;
-        if (filters.list_koreaTM_shanks && list_koreaTM_shanks.indexOf(id) == -1) return false;
-        if (filters.list_koreaTM_hancock && list_koreaTM_hancock.indexOf(id) == -1) return false;
-        if (filters.list_koreaTM_law && list_koreaTM_law.indexOf(id) == -1) return false;
-        if (filters.list_koreaTM_kaidou && list_koreaTM_kaidou.indexOf(id) == -1) return false;
+        // if (filters.koreaTM_kizaru && list_koreaTM_kizaru.indexOf(id) == -1) return false;
+        // if (filters.koreaTM_bigmam && list_koreaTM_bigmam.indexOf(id) == -1) return false;
+		// if (filters.koreaTM_crocodile && list_koreaTM_crocodile.indexOf(id) == -1) return false;
+		// if (filters.list_koreaTM_jack && list_koreaTM_jack.indexOf(id) == -1) return false;
+        // if (filters.list_koreaTM_enel && list_koreaTM_enel.indexOf(id) == -1) return false;
+        // if (filters.list_koreaTM_shanks && list_koreaTM_shanks.indexOf(id) == -1) return false;
+        // if (filters.list_koreaTM_hancock && list_koreaTM_hancock.indexOf(id) == -1) return false;
+        // if (filters.list_koreaTM_law && list_koreaTM_law.indexOf(id) == -1) return false;
+        // if (filters.list_koreaTM_kaidou && list_koreaTM_kaidou.indexOf(id) == -1) return false;
         if (filters.list_koreaTM_nami && list_koreaTM_nami.indexOf(id) == -1) return false;
+        if (filters.list_koreaTM_omoody && list_koreaTM_omoody.indexOf(id) == -1) return false;
 		// koera end
         //=====================================
 
