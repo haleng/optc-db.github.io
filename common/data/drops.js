@@ -2424,6 +2424,33 @@ window.drops = {
             'All Difficulties': [ 2570, 2572, 2573, -2418, -2465, -1045, -2001, -2369, -2185, -2183, -2287, -2119, -2082, -1993, -2031, -2103, -2105, -1987, -2229, -2317, -2318 ]
         },
         
+        {
+            name: 'Pirate Expo! Vacation',
+            dropID: 'event122',
+            thumb: 2635,
+            nakama: null,
+            gamewith: 159294,
+            'All Difficulties': [ 2635, 2636, 2637, 2639, -1794, -1883, -2477, -1366, -1743, -1875, -1877, -2269, -2306, -2344, -2349, -2420, -2538, -2542, -2319 ]
+        },
+        
+        {
+            name: 'Pirate Expo! Festival',
+            dropID: 'event123',
+            thumb: 2633,
+            nakama: null,
+            gamewith: 159294,
+            'All Difficulties': [ 2633, 2634, 2638, 2640, 2641, -2536, -2463, -2426, -2424, -2422, -2275, -2273, -2113, -2078, -2035, -1391, -1926, -1904, -1902, -1612, -2321 ]
+        },
+        
+        {
+            name: 'Diva Ann\'s Special Live Show',
+            dropID: 'event124',
+            thumb: 2665,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2665, 2666, -2485, -2483, -2481, -2479, -2475, -2431, -2271, -2247, -2244, -2152, -2150, -1763, -3336, -1749, -1192, -1764, -1131 ]
+        },
+        
     ],
 
             
@@ -2516,6 +2543,7 @@ window.drops = {
             thumb: 3352,
             global: true,
             nakama: 4335200,
+            condition: 'Master: Powerhouse/Fighter/Shooter Only',
             gamewith: null,
             slefty: 'raid_bosses/6',
             Master: [ 3351 ],
@@ -2676,6 +2704,17 @@ window.drops = {
             condition: 'Take 10% current Health in Environmental Damage every 2 turns',
             Master: [ 794 ],
             Expert: [ 794 ]
+        },
+
+        {
+            name: 'Clash Neo!! Nightmare Luffy',
+            dropID: 'clashneo14',
+            thumb: 3357,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: 'Take 10% current Health in Environmental Damage every 2 turns. Master: Free Spirit/Driven/Cerebral Only',
+            Expert: [ 3356 ]
         },
 
         {
@@ -2930,6 +2969,18 @@ window.drops = {
         },
         
         {
+            name: 'Clash Neo!! Vergo',
+            dropID: 'clashneo27',
+            thumb: 3359,
+            global: true,
+            condition: 'Master: Striker/Cerebral/Powerhouse Only',
+            nakama: 4169600,
+            gamewith: 63217,
+            Master: [ 3358 ],
+            Expert: [ 3358 ]
+        },
+        
+        {
             name: 'Clash!! Vinsmoke Sanji',
             dropID: 'clash28',
             thumb: 1815,
@@ -3154,6 +3205,16 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! STAMPEDE',
+            thumb: 2642,
+            global: true,
+            nakama: null,
+            gamewith: 160324,
+            Master: [ 2642, 2643, 2644, 2645, 2646, 2647, 2662 ],
+            Expert: [ 2642, 2643, 2644, 2645, 2646, 2647, 2662 ],
+        },
+        
+        {
             name: 'Showdown!! Shanks & Mihawk',
             thumb: 3342,
             global: true,
@@ -3175,7 +3236,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 883, 902, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1603, 1627, 1666, 1693, 1827, 1944, 2036, 2162, 2192, 2353, 2415, 2470, 2488 ],
+            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1528, 1552, 1554, 1583, 1627, 1827, 1944, 2036, 2192, 2415, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
@@ -3185,7 +3246,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 2036, 2162, 2192, 2488 ],
+            Underground: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552, 2036, 2192, 2488 ],
         },
         
         {
@@ -3194,7 +3255,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Exhibition: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603 ],
+            Exhibition: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552 ],
         },
 
         {
@@ -3233,6 +3294,19 @@ window.drops = {
         },
 
         {
+            name: 'Blue Ogre\'s Sovereignty',
+            thumb: 884,
+            showManual: true,
+            global: true,
+            nakama: 5088301,
+            gamewith: 22034,
+            slefty: 'coliseums',
+            Chaos: [ 883, -884 ],
+            Underground: [ 883, -884 ],
+            Exebition: [ 883, -884 ],
+        },
+
+        {
             name: 'Super Pervert',
             thumb: 901,
             showManual: true,
@@ -3241,6 +3315,19 @@ window.drops = {
             gamewith: 23129,
             slefty: 'coliseums',
             Chaos: [ 900, -901 ],
+        },
+
+        {
+            name: 'Red Ogre\'s Sovereignty',
+            thumb: 903,
+            showManual: true,
+            global: true,
+            nakama: 5090201,
+            gamewith: 23131,
+            slefty: 'coliseums',
+            Chaos: [ 902, -903 ],
+            Underground: [ 902, -903 ],
+            Exebition: [ 902, -903 ],
         },
 
         {
@@ -3456,6 +3543,19 @@ window.drops = {
         },
 
         {
+            name: 'Unhesitating Plan',
+            thumb: 1458,
+            showManual: true,
+            global: true,
+            nakama: 5145701,
+            gamewith: 50806,
+            slefty: 'coliseums',
+            Chaos: [ 1457, -1458 ],
+            Underground: [ 1457, -1458 ],
+            Exebition: [ 1457, -1458 ],
+        },
+
+        {
             name: 'Lonely XXX-Weight Boxer',
             thumb: 1487,
             showManual: true,
@@ -3479,6 +3579,30 @@ window.drops = {
         },
 
         {
+            name: 'Hero in Exile',
+            thumb: 1525,
+            showManual: true,
+            global: true,
+            nakama: 5152501,
+            gamewith: 53590,
+            slefty: 'coliseums',
+            Chaos: [ 1525, -1525 ],
+        },
+
+        {
+            name: 'Prejudice-Driven Ruler',
+            thumb: 1527,
+            showManual: true,
+            global: true,
+            nakama: 5152601,
+            gamewith: 53588,
+            slefty: 'coliseums',
+            Chaos: [ 1526, -1527 ],
+            Underground: [ 1526, -1527 ],
+            Exebition: [ 1526, -1527 ],
+        },
+
+        {
             name: 'Wano Kingdom Hero',
             thumb: 1555,
             showManual: true,
@@ -3489,6 +3613,19 @@ window.drops = {
             Chaos: [ 1554, -1555 ],
             Underground: [ 1554, -1555 ],
             Exebition: [ 1554, -1555 ],
+        },
+
+        {
+            name: 'Riding Coattails',
+            thumb: 1586,
+            showManual: true,
+            global: true,
+            nakama: 5158501,
+            gamewith: 56051,
+            slefty: 'coliseums',
+            Chaos: [ 1585, -1586 ],
+            Underground: [ 1585, -1586 ],
+            Exebition: [ 1585, -1586 ],
         },
 
         {
@@ -3503,6 +3640,19 @@ window.drops = {
         },
 
         {
+            name: 'Lightning Swordsman',
+            thumb: 1603,
+            showManual: true,
+            global: true,
+            nakama: 5160301,
+            gamewith: 57472,
+            slefty: 'coliseums',
+            Chaos: [ 1603, -1603 ],
+            Underground: [ 1603, -1603 ],
+            Exebition: [ 1603, -1603 ],
+        },
+
+        {
             name: 'Of Course I\'ve Got a Backbone!!!',
             thumb: 1630,
             showManual: true,
@@ -3513,6 +3663,28 @@ window.drops = {
             Chaos: [ 1629, -1630 ],
             Underground: [ 1629, -1630 ],
             Exebition: [ 1629, -1630 ],
+        },
+
+        {
+            name: 'Undefeated Gladiator',
+            thumb: 1667,
+            showManual: true,
+            global: true,
+            nakama: 5166601,
+            gamewith: 61260,
+            slefty: 'coliseums',
+            Chaos: [ 1666, -1667 ],
+        },
+
+        {
+            name: 'Mokomo Dukedom King of the Day',
+            thumb: 1694,
+            showManual: true,
+            global: true,
+            nakama: 5169301,
+            gamewith: 62895,
+            slefty: 'coliseums',
+            Chaos: [ 1693, -1694 ],
         },
 
         {
@@ -3691,6 +3863,18 @@ window.drops = {
         },
 
         {
+            name: 'Prohibited Poison',
+            thumb: 2354,
+            showManual: true,
+            global: true,
+            nakama: 5235301,
+            gamewith: 132845,
+            slefty: 'coliseums',
+            Chaos: [ 2353, -2354 ],
+            Underground: [ 2353, -2354 ],
+        },
+
+        {
             name: 'Totto Land\'s Minister of Juice',
             thumb: 2375,
             showManual: true,
@@ -3700,6 +3884,18 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 2374, -2375 ],
             Underground: [ 2374, -2375 ],
+        },
+
+        {
+            name: 'Man Who Can See The Future',
+            thumb: 2471,
+            showManual: true,
+            global: true,
+            nakama: 5247001,
+            gamewith: 145439,
+            slefty: 'coliseums',
+            Chaos: [ 2470, -2471 ],
+            Underground: [ 2470, -2471 ],
         },
 
         {
@@ -3737,9 +3933,20 @@ window.drops = {
             thumb: 2611,
             showManual: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 156226,
             slefty: 'coliseums',
             Chaos: [ 2610, -2611 ],
+            Underground: [ 2610, -2611 ],
+        },
+
+        {
+            name: 'Trafalgar Law',
+            thumb: 2649,
+            showManual: true,
+            nakama: null,
+            gamewith: 160900,
+            slefty: 'coliseums',
+            Chaos: [ 2648, -2649 ],
         },
         
     ],
@@ -3903,7 +4110,7 @@ window.drops = {
             thumb: 2362,
             nakama: 8236200,
             gamewith: 134017,
-            'Winter Sea': [ 2361, 9025 ]
+            'Raging Sea': [ 2361, 9025 ]
         },
 
         {
@@ -3922,7 +4129,7 @@ window.drops = {
             thumb: 2443,
             nakama: 143066,
             gamewith: 8244300,
-            'Primordial Sea': [ 2442, 9026 ]
+            'Primordial Sea': [ 2442, 2439, 9026 ]
         },
 
         {
@@ -3966,8 +4173,17 @@ window.drops = {
             dropID: 'treasuremap23',
             thumb: 2618,
             nakama: null,
-            gamewith: null,
+            gamewith: 157969,
             'Primordial Sea': [ 2616, 2617 ]
+        },
+
+        {
+            name: 'Smoker',
+            dropID: 'treasuremap24',
+            thumb: 2659,
+            nakama: null,
+            gamewith: 162014,
+            'Expo Sea': [ 2658, 2660 ]
         },
         
     ],
@@ -4065,6 +4281,7 @@ window.drops = {
             'All Difficulties': [ 2531 ],
             'Round 1': [ 2518 ],
             'Round 2': [ 2615 ],
+            'Round 3': [ 2629 ],
         },/*
         
         {
@@ -4302,6 +4519,14 @@ window.drops = {
             thumb: 2363,
             gamewith: 136731,
             condition: 'Chance of dropping the Support Medallions.',
+        },
+
+        {
+            name: 'Battle Blitz! Girls of Summer Paradise',
+            thumb: 2626,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 2627 ],
         },
         
         {

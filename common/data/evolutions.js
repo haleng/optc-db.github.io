@@ -3935,6 +3935,10 @@ window.evolutions = {
         evolution: 2431,
         evolvers: [ 118, 87, 98, 303, 103 ]
     },
+    2432: {
+        evolution: 2433,
+        evolvers: [ 118, 266, 95, 300, 267 ]
+    },
     1747: {
         evolution: 2434,
         evolvers: [ 'skullHancock', 'skullHancock', 'skullHancock', 'skullHancock', 'skullHancock' ]
@@ -3942,14 +3946,6 @@ window.evolutions = {
     2551: {
         evolution: 2552,
         evolvers: [ 104, 102, 267, 1180, 118 ]
-    },
-    3333: {
-        evolution: 3334,
-        evolvers: [ 118, 86, 266, 302, 267 ]
-    },
-    1763: {
-        evolution: 3336,
-        evolvers: [ 'skullQCK', 'skullQCK', 'skullQCK', 1180, 301 ]
     },
     2440: {
         evolution: 2441,
@@ -4179,6 +4175,10 @@ window.evolutions = {
         evolution: 2588,
         evolvers: [ 'skullNami2', 'skullNami2', 'skullNami2', 'skullNami2', 'skullNami2' ]
     },
+    2229: {
+        evolution: 2597,
+        evolvers: [ 'skullINT', 83, 88, 99, 104 ]
+    },
     2600: {
         evolution: 2601,
         evolvers: [ 118, 102, 100, 83, 267 ]
@@ -4211,9 +4211,69 @@ window.evolutions = {
         evolution: 2618,
         evolvers: [ 115, 116, 117, 118, 2616 ]
     },
-    2229: {
-        evolution: 2597,
-        evolvers: [ 'skullINT', 83, 88, 99, 104 ]
+    2619: {
+        evolution: 2620,
+        evolvers: [ 118, 88, 93, 99, 104 ]
+    },
+    2621: {
+        evolution: 2622,
+        evolvers: [ 118, 87, 92, 98, 103 ]
+    },
+    2623: {
+        evolution: 2624,
+        evolvers: [ 118, 86, 91, 97, 102 ]
+    },
+    2625: {
+        evolution: 2626,
+        evolvers: [ 118, 84, 89, 95, 100 ]
+    },
+    2627: {
+        evolution: 2628,
+        evolvers: [ 116, 117, 80, 86, 97 ]
+    },
+    2629: {
+        evolution: 2630,
+        evolvers: [ 116, 117, 79, 85, 96 ]
+    },
+    1473: {
+        evolution: 2631,
+        evolvers: [ 'skullPSY', 118, 98, 303, 267 ]
+    },
+    2648: {
+        evolution: 2649,
+        evolvers: [ 118, 98, 1180, 303, 103 ]
+    },
+    2650: {
+        evolution: 2651,
+        evolvers: [ 118, 300, 2662, 100, 267 ]
+    },
+    2652: {
+        evolution: 2653,
+        evolvers: [ 94, 2662, 300, 300, 100 ]
+    },
+    2654: {
+        evolution: 2655,
+        evolvers: [ 94, 2662, 304, 304, 104 ]
+    },
+    2656: {
+        evolution: 2657,
+        evolvers: [ 94, 2662, 301, 301, 101 ]
+    },
+    2658: {
+        evolution: 2659,
+        evolvers: [ 115, 116, 117, 118, 101 ]
+    },
+    2660: {
+        evolution: 2661,
+        evolvers: [ 94, 2662, 304, 304, 104 ]
+    },
+    3333: {
+        evolution: 3334,
+        evolvers: [ 118, 86, 266, 302, 267 ]
+    },
+    1763: {
+        evolution: 3336,
+        evolvers: [ 'skullQCK', 'skullQCK', 'skullQCK', 1180, 301 ]
     },
     3339: {
         evolution: 3340,
@@ -4242,5 +4302,17 @@ window.evolutions = {
     3353: {
         evolution: 3354,
         evolvers: [ 118, 86, 266, 97, 267 ]
+    },
+    3356: {
+        evolution: 3357,
+        evolvers: [ 118, 85, 266, 301, 101 ]
+    },
+    3358: {
+        evolution: 3359,
+        evolvers: [ 118, 84, 266, 300, 100 ]
+    },
+    3360: {
+        evolution: 3361,
+        evolvers: [  ]
     },
 };
