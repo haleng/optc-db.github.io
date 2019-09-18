@@ -640,6 +640,12 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
     },
+    2393: {
+        atkStatic: function(p) { return p.slot <= 1 ? 80 : 0; },
+    },
+    2394: {
+        atkStatic: function(p) { return p.slot <= 1 ? 80 : 0; },
+    },
     2400: {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
@@ -912,6 +918,23 @@ window.sailors = {
     },
     2661: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
+    },
+    2673: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+    },
+    2674: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+    },
+    2682: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+    },
+    2683: {
+        hpStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+    },
+    2684: {
+        hpStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
     },
     3333: {
         staticMult: function(p) { return 3; }
@@ -1438,5 +1461,17 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5180: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
+    5181: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
+    5182: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
+    5183: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
     },
 };
