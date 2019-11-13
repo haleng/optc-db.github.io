@@ -879,7 +879,7 @@ window.drops = {
             gamewith: 111173,
             '01': [ 2003 ],
             '02': [  ],
-            '03': [ 991 ],
+            '03': [  ],
             '04': [ 1292 ],
             '05': [ 1400 ],
             '06': [  ],
@@ -2375,7 +2375,7 @@ window.drops = {
             global: true,
             nakama: 2232700,
             gamewith: 127786,
-            'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2117, -2119, -2002, -2005 ]
+            'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2739, -2117, -2119, -2002, -2005 ]
         },
         
         {
@@ -2429,8 +2429,9 @@ window.drops = {
         },
         
         {
-            name: 'Dress Up for the Pirate Festival!',
+            name: 'Dress Up for the Pirate Festival! Pop',
             dropID: 'event119',
+            global: true,
             thumb: 2519,
             nakama: 2251900,
             gamewith: 149417,
@@ -2440,10 +2441,11 @@ window.drops = {
         {
             name: 'Dress Up for the Pirate Festival! Chic',
             dropID: 'event120',
+            global: true,
             thumb: 2524,
             nakama: 2252400,
             gamewith: 150791,
-            'All Difficulties': [ 2523, 2524, 2525, 2526, 2527, -2074, -2363, -2365, -2072, -2078, -2115, -2304, -2189, -2285, -2367, -2371, -2538, -2540, -2542, -2544, -2231 ]
+            'All Difficulties': [ 2523, 2524, 2525, 2526, 2527, -2074, -2363, -2365, -2072, -1957, -2115, -2304, -2189, -2285, -2367, -2371, -2538, -2540, -2542, -2544, -2231 ]
         },
         
         {
@@ -2470,7 +2472,7 @@ window.drops = {
             thumb: 2633,
             nakama: 2263300,
             gamewith: 159294,
-            'All Difficulties': [ 2633, 2634, 2638, 2640, 2641, -2536, -2463, -2426, -2424, -2422, -2275, -2273, -2113, -2078, -2035, -1391, -1926, -1904, -1902, -1612, -2321 ]
+            'All Difficulties': [ 2633, 2634, 2638, 2640, 2641, -2536, -2463, -2426, -2424, -2422, -2275, -2273, -2113, -2739, -2078, -2035, -1391, -1926, -1904, -1902, -1612, -2321 ]
         },
         
         {
@@ -2498,6 +2500,15 @@ window.drops = {
             nakama: 2272300,
             gamewith: 171113,
             'All Difficulties': [ 2722, 2724, -2607, -2577, -2575, -2567, -2346, -2119, -2117, -2027, -1794, -2005, -2565 ]
+        },
+        
+        {
+            name: 'Revenge of the Assassins! Galette',
+            dropID: 'event126',
+            thumb: 2723,
+            nakama: null,
+            gamewith: 174577,
+            'All Difficulties': [ 2750, 2751, 2752, -2446, -2601, -2426, -2657, -2653, -1904, -2655, -2598, -2275, -2332 ]
         },
         
     ],
@@ -3254,6 +3265,7 @@ window.drops = {
             name: 'Clash!! Magellan & Hannyabal',
             dropID: 'clash44',
             thumb: 2517,
+            global: true,
             nakama: 4251700,
             gamewith: 149117,
             Master: [ 2516 ],
@@ -3262,6 +3274,7 @@ window.drops = {
         
         {
             name: 'Clash!! Sengoku & Garp',
+            dropID: 'clash45',
             thumb: 2552,
             global: true,
             nakama: 4255200,
@@ -3272,6 +3285,7 @@ window.drops = {
         
         {
             name: 'Game!! Leo',
+            dropID: 'clash46',
             thumb: 2559,
             nakama: 4255900,
             gamewith: 152009,
@@ -3281,6 +3295,7 @@ window.drops = {
         
         {
             name: 'Clash!! STAMPEDE',
+            dropID: 'clash47',
             thumb: 2642,
             nakama: 4264200,
             condition: 'Second Expert version with Bullet boss stage will drop Stampede Limit Break materials',
@@ -3291,6 +3306,7 @@ window.drops = {
         
         {
             name: 'Showdown!! Lucci',
+            dropID: 'clash48',
             thumb: 2670,
             nakama: 4267000,
             gamewith: 163423,
@@ -3300,6 +3316,7 @@ window.drops = {
         
         {
             name: 'Clash!! Sabo',
+            dropID: 'clash49',
             thumb: 2684,
             nakama: 4268400,
             gamewith: 165289,
@@ -3309,6 +3326,7 @@ window.drops = {
         
         {
             name: 'Clash!! Ace',
+            dropID: 'clash50',
             thumb: 2394,
             global: true,
             nakama: 4239400,
@@ -3320,6 +3338,7 @@ window.drops = {
         
         {
             name: 'Showdown!! Crocodile',
+            dropID: 'clash51',
             thumb: 2698,
             nakama: 4269800,
             gamewith: 168159,
@@ -3330,6 +3349,7 @@ window.drops = {
         
         {
             name: 'Game!! Zorojuro',
+            dropID: 'clash52',
             thumb: 2707,
             nakama: 4270700,
             gamewith: 168824,
@@ -3339,6 +3359,7 @@ window.drops = {
         
         {
             name: 'Clash!! Law',
+            dropID: 'clash53',
             thumb: 2709,
             nakama: 4270900,
             gamewith: 168822,
@@ -3356,6 +3377,16 @@ window.drops = {
             Master: [ 3341 ],
             Expert: [ 3341 ],
             Ultimate: [ 3341 ],
+        },
+        
+        {
+            name: 'Showdown!! Usopp & Chopper',
+            thumb: 3370,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            Expert: [ 3370 ],
+            Ultimate: [ 3370 ],
         },
 
     ],
@@ -4232,6 +4263,16 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 2720, -2721 ],
         },
+
+        {
+            name: 'Devil Oars',
+            thumb: 2755,
+            showManual: true,
+            nakama: null,
+            gamewith: 174652,
+            slefty: 'coliseums',
+            Chaos: [ 2754, -2755 ],
+        },
         
     ],
 
@@ -4431,6 +4472,7 @@ window.drops = {
             name: 'Edward Weevil',
             dropID: 'treasuremap20',
             thumb: 2510,
+            global: true,
             nakama: null,
             gamewith: 148609,
             'Raging Sea': [ 2509 ]
@@ -4486,8 +4528,17 @@ window.drops = {
             dropID: 'treasuremap26',
             thumb: 2729,
             nakama: null,
-            gamewith: null,
+            gamewith: 171580,
             'Raging Sea': [ 2728 ]
+        },
+
+        {
+            name: 'Witch Nami',
+            dropID: 'treasuremap27',
+            thumb: 2763,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2762 ]
         },
         
     ],
@@ -4582,23 +4633,23 @@ window.drops = {
             dropID: 'bond1',
             thumb: 2531,
             nakama: null,
-            gamewith: [ 150056, 155125, 159694, 156784, 164568 ],
+            gamewith: [ 150056, 155125, 159694, 156784, 164568, 172467 ],
             'All Difficulties': [ 2531 ],
             'Round 1': [ 2518 ],
             'Round 2': [ 2615 ],
             'Round 4': [ 2629 ],
             'Round 5': [ 2682 ],
             'Round 6': [ 2733 ],
-        },/*
+        },
         
         {
-            name: 'Garp',
+            name: 'Grim Reaper Sabo',
             dropID: 'bond2',
-            thumb: 2632,
+            thumb: 2758,
             nakama: null,
-            gamewith: [ null ],
-            'All Difficulties': [ 2632 ],
-        },*/
+            gamewith: [ 174864 ],
+            'All Difficulties': [ 2757 ],
+        },
         
     ],
 
@@ -4665,6 +4716,13 @@ window.drops = {
         },
         
         {
+            name: 'Dead or Treat!! Devilish Party',
+            thumb: 2749,
+            gamewith: 174437,
+            'All Difficulties': [ 2748 ],
+        },
+        
+        {
             name: 'Sweet Tea Time',
             thumb: 1463,
             global: true,
@@ -4711,6 +4769,14 @@ window.drops = {
             '30 Stamina': [ 1600, 189, 190, 191, 192, 193, 118, 110, 111, 112, 113, 114, 117, 116, 115 ],
             '40 Stamina': [ 189, 190, 191, 192, 193, 118, 110, 111, 112, 113, 114, 117, 116, 115 ],
         },
+
+        {
+            name: 'Garp Challenge',
+            thumb: 1318,
+            global: true,
+            nakama: 6334000,
+            gamewith: [ 155027, 155105, 155056, 154932, 132931, 159295 ],
+        },
         
         {
             name: 'Memories of Marineford',
@@ -4724,10 +4790,10 @@ window.drops = {
         {
             name: 'Beginner Adventure: Whole Cake Island Special Edition',
             thumb: 2532,
+            global: true,
             nakama: null,
             gamewith: 149693,
-            condition: 'Will have a unique tab in the drops page soon.',
-            'All Difficulties': [ 2532, 2518 ]
+            'All Difficulties': [ 2532 ]
         },
         
         {
@@ -4839,6 +4905,13 @@ window.drops = {
         },
         
         {
+            name: 'Outpost Battle! Four Emperors on the Move!',
+            thumb: 2738,
+            gamewith: 173400,
+            'All Difficulties': [ 2737 ],
+        },
+        
+        {
             name: 'The Flashback Before the Reunion! Fight all your Enemies!',
             thumb: 1353,
             global: true,
@@ -4911,8 +4984,9 @@ window.drops = {
         },
         
         {
-            name: 'Special Festival! 5th Anniversary',
+            name: 'Manual Festival!',
             thumb: 2534,
+            global: true,
             nakama: 6207600,
             gamewith: 150408,
             showManual: true,
@@ -4928,7 +5002,7 @@ window.drops = {
             'Shirahoshi': [ -720, -935, -1434, -1473, -2631, -1880, -1927, -2066, -939, -1436, -1438, -1440, -1442, -1444, -1475, -1477, -1479, -1481, -1483, -1700 ],
             'Fujitora': [ -870, -1035, -1123, -1869, -1928, -2357, -2444, -2505, -995, -1232, -1234, -1236, -1238, -1318, -1320, -1796, -1871, -1904, -1906, -1908 ],
             'Whitebeard & Marco': [ -2007, -2023, -2025, -2181, -2302, -1902, -1989, -2027, -2029, -2031, -2068, -2117, -2199, -2240, -2244, -2247, -2308 ],
-            'Sabo': [ -1935, -1985, -2113, -2251, -2300, -2441, -1895, -1926, -1953, -1959, -1987, -1991, -1993, -2050, -2119, -2154, -2156, -2161, -2238 ],
+            'Sabo': [ -1935, -1985, -2113, -2739, -2251, -2300, -2441, -1895, -1926, -1953, -1959, -1987, -1991, -1993, -2050, -2119, -2154, -2156, -2161, -2238 ],
             'Vinsmoke Sanji': [ -1951, -2074, -2076, -2588, -2148, -2236, -2363, -1955, -1957, -2013, -2048, -2072, -2078, -2080, -2082, -2150, -2242, -2273, -2275 ],
             'Jinbe': [ -2099, -2201, -2234, -2265, -2330, -2500, -1974, -2101, -2103, -2105, -2107, -2203, -2205, -2267, -2269, -2271, -2332, -2334 ],
         },
@@ -4941,8 +5015,8 @@ window.drops = {
             gamewith: null,
             showManual: true,
             condition: 'Chance to get Manuals for the first Charlotte Family batch. Only Boosters will drop posters.',
-            Ultimate: [ -2113, -2115, -2117, -2119, -2121 ],
-            Expert: [ -2113, -2115, -2117, -2119, -2121 ],
+            Ultimate: [ -2113, -2739, -2115, -2117, -2119, -2121 ],
+            Expert: [ -2113, -2739, -2115, -2117, -2119, -2121 ],
         },
         
         {
