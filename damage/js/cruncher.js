@@ -588,7 +588,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         
         //Get the strongest Color affinity Mult captains
         captAffinityMultiplier.forEach(function(captain){
-                    captAffinityMult *= captain.captAffinityMultiplier(unit);
+                    //captAffinityMult *= captain.captAffinityMultiplier(unit);
+                    var params = getParameters(teamSlot)
+                    params["sourceSlot"] = captain.sourceSlot;
+                    captAffinityMult *= captain.captAffinityMultiplier(params);
                 });
         
         //console.log(affinityMult);
@@ -896,7 +899,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
         enabledEffects.forEach(function(data) {
             if (data.hasOwnProperty('affinity'))
-                captAffinityMultiplier.push({captAffinityMultiplier: data.affinity || function(){ return 1.0; }});
+                captAffinityMultiplier.push({ sourceSlot: data.sourceSlot, captAffinityMultiplier: data.affinity || function(){ return 1.0; }});
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
         if (chainSpecials.length === 0) chainSpecials.push({
@@ -1298,7 +1301,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if (x.hasOwnProperty('rcv') && x.sourceSlot > 1)
                             rcvmulttemp *= x.rcv(getParameters(i));
                     });
-                    if ([ 1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302, 2443, 5083, 5084, 5085, 5087, 5088, 5089 ].has(id)){
+                    if ([ 1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302, 2443, 2775, 2776, 2792, 5083, 5084, 5085, 5087, 5088, 5089 ].has(id)){
                         var hitsCount = { 'Perfect': 0, 'Great': 0, 'Good': 0, 'Below Good': 0, 'Miss': 0 };
                         var teamlength = 0;
                         
@@ -1310,10 +1313,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += id == 1889 ? capActions[i] ? 2 * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
                         healAmount += id == 2211 ? capActions[i] ? 510 : 51 : 0;
                         healAmount += id == 2443 ? capActions[i] ? 500 : 50 : 0;
+                        healAmount += id == 2792 ? Math.floor(1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp) : 0;
                         healAmount += (id == 1000 || id == 1001 || id == 2195) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Great']) : 0;
                         healAmount += (id == 1319) ? (1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1320) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
-                        healAmount += (id == 1750 || id == 1751 || id == 1922 || id == 5083 || id == 5087) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
+                        healAmount += (id == 1750 || id == 1751 || id == 1922  || id == 2775  || id == 2776 || id == 5083 || id == 5087) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 5084 || id == 5085 || id == 5088 || id == 5089) ? (1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += ((id == 2301 || id == 2302) && classCounter().Shooter == 6) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += id == 2261 ? capActions[i] ? 1.75 * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
